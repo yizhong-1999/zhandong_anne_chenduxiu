@@ -20,18 +20,18 @@ author:
     affiliations:
       - Baylor Medicine College
 keywords:
-  - Keyword 1
-  - Keyword 2
-  - Keyword 3
-  - Keyword 4 (optional)
-  - Keyword 5 (optional)
+  - capitalism
+  - communism
+  - ChatGPT  
 abstract: |
-  We intend to leverage ChatGPT to detect changes in Chen’s thinking about the theory and practice of Marxism and Communism. Through embedding and prompt engineering, we plan to extract topic sentences, generate summary statements and estimate topic opinions on these summaries. Our work introduces two key innovations: 1) the utilization of advanced AI methodologies grounded in extensive language models, as opposed to traditional statistical techniques that often relied on oversimplified assumptions, and 2) an extension of our analysis to sentences rather than individual words, allowing for richer contextual understanding. 
+  We propose to examine the writing of the founder of the Chinese Communist Party, Chen Duxiu (1879-1942), by using the innovative AI technique ChatGPT. We intend to leverage ChatGPT to detect change in Chen’s thinking about politics, specifically on his thoughts about capitalism and communism.
+The central objective is to compare the efficacy of our 2021 work on co-occurrence network methodology with the novel ChatGPT approach. We seek the best method to trace Chen's ideological evolution—from an early advocate of Western-style democracy to a proponent of Marxism and communism, and to a final reckoning at the end of his life. Our tools include ChatGPT, LLaMA, GPT-API, and Python. Early finding is that the concept (topic-modeling) by GPT is accurate but constrained by word limits. We will need more time to do a finer comparison. Our finding is that Llamas with 2x7billioin parameters model is not adequate in providing a summary, whereas ChatGPT-4 is strong is summarizing straight-forward analysis, but would need more prompt engineering to detect multiple and nuanced points of view.
+We offer two innovations in this paper: 1) the utilization of advanced AI methodologies grounded in extensive language models, as opposed to traditional statistical techniques that often relied on oversimplified assumptions, and 2) an extension of our analysis to sentences rather than individual words, allowing for richer contextual understanding.
 key-points:
-  - Key point 1 (1 sentence)
-  - Key point 2 (1 sentence)
-  - Key point 3 (1 sentence)
-date: 03-17-2024
+  - We strive to detect the evolution of political convictions in the writings of the founder of the Chinese Communist Party with AI tools by posing a question: "Is this article in favor of communism or capitalism?”
+  - LLaMA was used for interpreting Chinese text but provided an inadequate summary.
+  - ChatGPT offered a good analysis when the text contained one strong point of view, but encountered challenges when multiple perspectives were present in the same text.
+date: 07-26-2024
 bibliography: references.bib
 ---
 
@@ -106,40 +106,3 @@ ChatGPT 4 is able to detect strong and consistent sentiments in articles, but wo
 In conclusion, the use of ChatGPT 4 for analyzing historical texts presents both significant advantages and notable challenges. ChatGPT 4 has demonstrated its capability to detect strong and consistent sentiments in articles, providing systematic and accurate summaries in many cases. However, it occasionally forces connections that do not exist, particularly in texts with nuanced or multiple viewpoints. This limitation highlights the importance of historical context, which the model sometimes misses, leading to misinterpretations of the larger point. Conversely, the Llama 2-7b model was unable to perform the analysis adequately, emphasizing there may be a need for larger models. Our study underscores the need for continuous refinement in leveraging AI methodologies for historical text analysis. Future work should focus on enhancing the model’s contextual understanding and its ability to handle complex, multi-faceted arguments, thereby improving its overall efficacy in historical and ideological analysis.
 
 Through our analysis, we gained deeper insights into the evolution of Chen Duxiu's thoughts. In his early writings, Chen was a fervent supporter of Western democratic ideals. However, his disillusionment with Western democracy, especially after the Treaty of Versailles, led him to co-found the Chinese Communist Party and embrace Marxist ideologies. Despite this shift, Chen's later writings revealed a nuanced perspective. He criticized Stalin's dictatorship and acknowledged the merits of bourgeois democracy, indicating an ambivalence toward both Western and Communist ideologies. This complexity in Chen's thought underscores the importance of a refined approach in analyzing historical texts, which current AI models are still striving to fully achieve. 
-
-
-## Quarto Usage
-
-For advanced users, we recommend exploring features as **Code Blocks**: Use triple backticks (```) to create code blocks. Specify the language for syntax highlighting (e.g., ```python`). Quarto lets you run code and embed its output directly into your document. See <https://quarto.org/docs/computations/inline-code.html> for guidance.
-
-```{python}
-#| output: false
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Create some simple synthetic historical data
-np.random.seed(0)
-years = pd.date_range('1900-01-01', periods=120, freq='Y')
-values = np.random.normal(loc=0, scale=1, size=120).cumsum()
-
-data = pd.DataFrame({
-    'Year': years.year,
-    'Value': values
-})
-
-# Save the data to a CSV file
-data.to_csv('data/sample_data.csv', index=False)
-```
-
-```{python}
-#| label: fig-plots
-# Plotting the data
-plt.figure(figsize=(10, 6))
-plt.plot(data['Year'], data['Value'], marker='o')
-plt.title('Synthetic Historical Data')
-plt.xlabel('Year')
-plt.ylabel('Value')
-plt.grid(True)
-plt.show()
-```

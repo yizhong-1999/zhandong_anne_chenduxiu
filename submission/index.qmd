@@ -17,6 +17,7 @@ author:
     affiliations:
       - Unversity Of Texas At Dallas
   - name: Zhandong Liu
+    email: zhandonl@bcm.edu
     affiliations:
       - Baylor Medicine College
 keywords:
